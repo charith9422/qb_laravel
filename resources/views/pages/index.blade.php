@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
 <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-  <div class="wrapper">
-    <div class="jumbotron container">
+  <div id="wrapper">
+    <div class="jumbotron">
 
-        <h1 class="display-4"><strong>Question Bank</strong> | <span><small>Faculty of Science</small></span> </h1>
-        <p class="lead">Question Bank provides you with all the tips that would let you successfully face and interview.
+        <h1 class="display-4" style="color:white"><strong>Question Bank</strong> | <span><small>Faculty of Science</small></span> </h1>
+        <p class="lead" style="color:white">Question Bank provides you with all the tips that would let you successfully face and interview.
         </p>
         <hr class="my-4">
-        <p>It consists of all the popular questions that is frequently asked in job interviews mainly related to the
+        <p style="color:white">It consists of all the popular questions that is frequently asked in job interviews mainly related to the
           computer science field and other
           areas as well.</p>
         <p>
@@ -49,7 +49,7 @@
                     
                     </div>
                       
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
                     
                   </div>
                   
@@ -59,8 +59,8 @@
 
               
                   <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Need <a href="/register">an account?</a></span>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><i class="fas fa-times-circle"></i> Cancel</button>
+                    <span class="psw"><i class="fas fa-plus"></i> Need <a href="/register">an account?</a></span>
                   </div>
                 </form>
               </div>

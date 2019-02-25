@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="background-image: url('../storage/other_images/login-bg.jpg');background-repeat: repeat-y;">
         @if (!Auth::guest())
             @include('inc.navbar')
          @endif   

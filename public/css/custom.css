@@ -1,4 +1,4 @@
-.wrapper{
+#wrapper{
     background-image: url("../storage/other_images/login-bg.jpg");
 }
 .jumbotron {
@@ -47,8 +47,8 @@ input[type=text], input[type=password] {
   }
   
   img.avatar {
-    width: 10%;
-    height: 10%;
+    width: 15%;
+    height: 15%;
     border-radius: 50%;
   }
   
