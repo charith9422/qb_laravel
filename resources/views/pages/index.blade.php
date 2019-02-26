@@ -60,7 +60,7 @@
               
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><i class="fas fa-times-circle"></i> Cancel</button>
-                    <span class="psw"><i class="fas fa-plus"></i> Need <a href="/register">an account?</a></span>
+                    <span class="psw"><i class="fas fa-plus-circle"></i></i> Need <a href="/register">an account?</a></span>
                   </div>
                 </form>
               </div>

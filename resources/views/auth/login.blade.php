@@ -55,10 +55,13 @@
                                 <button type="submit" class="btn btn-primary">
                                     Login
                                 </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                <div>
+                                        <span class="psw"><i class="fas fa-plus-circle"></i> Need <a href="/register">an account?</a></span>
+                                </div>
+                                
+                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
-                                </a>
+                                </a> --}}
                             </div>
                         </div>
                     </form>

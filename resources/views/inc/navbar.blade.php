@@ -12,10 +12,11 @@
                   </button>
 
                   <!-- Branding Image -->
-                  
+                  @if (!Auth::guest())
                   <a class="navbar-brand" href="{{ url('/posts') }}">
                     <span><i class="fas fa-home"></i></span>  {{ config('app.name', 'LSAPP') }} 
                   </a>
+                  @endif
               </div>
 
               <div class="collapse navbar-collapse" id="app-navbar-collapse">

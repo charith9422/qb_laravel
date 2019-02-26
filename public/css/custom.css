@@ -1,8 +1,9 @@
 #wrapper{
-    background-image: url("../storage/other_images/login-bg.jpg");
+    background-image: url("../storage/other_images/bg.png");
 }
 .jumbotron {
     background-image: url("../storage/other_images/jumbotron-bg.jpg");
+    height: 100%;
     background-size: cover;
     border-radius: 5%;
 }
