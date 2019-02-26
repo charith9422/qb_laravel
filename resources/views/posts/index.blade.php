@@ -11,7 +11,7 @@
                     </div>
                     <div class="col-md-9 col-sm-9">
                         <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                        <small>Question added on {{$post->created_at}} by {{$post->user->name}}</small>
+                        <small style="color:black">Question added on {{$post->created_at}} by {{$post->user->name}}</small>
                     </div>
                 </div>
                 

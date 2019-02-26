@@ -3,13 +3,16 @@
 @section('content') 
     <a href="/posts" class="btn btn-default">Go Back</a>
     <h1>{{$post->title}}</h1>
-    <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}} ">
+    <img style="width:100%;" src="/storage/cover_images/{{$post->cover_image}} ">
     <br><br>
-    <div>
+    <div style="color:white">
         {!!$post->body!!}
     </div>
     <hr>
-    <small>Question added on {{$post->created_at}} by {{$post->user->name}}</small>
+    
+    <small style="color:#fffff">Question added on {{$post->created_at}} by {{$post->user->name}}</small>
+    
+    
     <hr>
     @if (!Auth::guest())
         @if (Auth::user()->id == $post->user_id)
@@ -18,10 +21,10 @@
                 {{Form::hidden('_method','DELETE')}}
                 {{-- {{Form::submit('Delete',['class'=>'btn btn-danger'])}} --}}
                 {{Form::button('<i class="fas fa-trash-alt"></i>',['class'=>'btn btn-danger','type'=>'submit'])}}
-            {!!Form::close()!!}    
+            {!!Form::close()!!}
+            <br><br>    
         @endif
             
     @endif
         
 @endsection
-<br><br>
