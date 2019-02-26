@@ -1,4 +1,5 @@
 
+
       <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
               <div class="navbar-header">
@@ -31,8 +32,20 @@
                       @if (!Auth::guest())
                         {{-- <li><a href="/posts">Questions</a></li> --}}
                         <li><a href="/dashboard">Dashboard</a></li>
+                        
+                        
                       @endif
                     </ul>
+                    <form class="navbar-form navbar-left" method="GET" action="{{ url('posts.search') }}">
+                        <div class="input-group">
+                          <input type="text" name="search" class="form-control" placeholder="Search" value="{{ old('search') }}">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
                   <!-- Right Side Of Navbar -->
                   <ul class="nav navbar-nav navbar-right">
                       <!-- Authentication Links -->

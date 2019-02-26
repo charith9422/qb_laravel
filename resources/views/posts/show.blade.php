@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('content') 
+@section('content')
+
+    
     <a href="/posts" class="btn btn-default"><span><i class="fas fa-backward"></i></span> Back</a>
     <div>
         <h1>{{$post->title}}</h1>

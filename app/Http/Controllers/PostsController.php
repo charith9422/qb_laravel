@@ -178,4 +178,16 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success','Post Deleted!');
     }
+
+
+
+    public function categorySearch(Request $request)
+    {
+      if($request->has('search')){
+        $posts = Post::search($request->get('search'))->get();  
+      }else{
+        $posts = Post::get();
+      }
+      return view('posts.search', compact('posts'));
+    }
 }

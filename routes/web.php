@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/','PagesController@index');
+Route::get('/', 'PagesController@index');
 
-Route::resource('posts','PostsController');
+Route::resource('posts', 'PostsController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::get('posts.search', 'PostsController@categorySearch');
+

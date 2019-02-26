@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +17,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+/* Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $category = Post::where('category','LIKE','%'.$q.'%')->get();
+    if(count($category) > 0)
+        return view('posts.index')->withDetails($category)->withQuery ( $q );
+    else return view ('posts.index')->withMessage('No Questions found. Try to search again !');
+}); */
+

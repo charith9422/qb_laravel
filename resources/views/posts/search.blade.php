@@ -2,9 +2,9 @@
  
 @section('content')
     <h1>Interview Questions</h1>
-
     <br>     
     @if (count($posts)>0)
+    <h4>Results found!</h4>
         @foreach ($posts as $post)
             <div class="well">
                 <div class="row">
@@ -20,8 +20,8 @@
                 
             </div>
         @endforeach
-        {{$posts->links()}}
+        
     @else
-        <p>No posts found</p>    
+        <p>No questions found</p>    
     @endif
 @endsection
