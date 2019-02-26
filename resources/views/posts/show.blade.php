@@ -13,13 +13,15 @@
     <hr>
     @if (!Auth::guest())
         @if (Auth::user()->id == $post->user_id)
-            <a href="/posts/{{$post->id}}/edit" class="btn btn-warning">Edit</a>
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-warning"><span><i class="fas fa-edit"></i></span> Edit</a>
             {!!Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'POST','class'=>'pull-right'])!!}
                 {{Form::hidden('_method','DELETE')}}
-                {{Form::submit('Delete',['class'=>'btn btn-danger'])}}
+                {{-- {{Form::submit('Delete',['class'=>'btn btn-danger'])}} --}}
+                {{Form::button('<i class="fas fa-trash-alt"></i>',['class'=>'btn btn-danger','type'=>'submit'])}}
             {!!Form::close()!!}    
         @endif
             
     @endif
         
 @endsection
+<br><br>

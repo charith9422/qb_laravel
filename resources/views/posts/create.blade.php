@@ -12,7 +12,7 @@
             {{Form::textarea('body','',['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'body'])}}
         </div>
         <div class="form-group">
-            {{Form::file('cover_image')}}
+            {{Form::file('cover_image',['class'=>'btn btn-info'])}}
         </div>
         {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
     
