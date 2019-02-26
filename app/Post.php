@@ -19,9 +19,6 @@ class Post extends Model
         ]
     ];
 
-    protected $fillable = [
-        'category',
-    ];
 
 
     public function user(){
