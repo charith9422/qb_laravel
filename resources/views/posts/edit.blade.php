@@ -8,6 +8,10 @@
             {{Form::text('title',$post->title,['class'=>'form-control','placeholder'=>'title'])}}
         </div>
         <div class="form-group">
+                {{Form::label('category','Category')}}
+                {{Form::select('category',array('Computer Science'=>'Computer Science','Java'=>'Java','C'=>'C','C++'=>'C++','Web'=>'Web','Multimedia'=>'Multimedia','Artificial Inteligence'=>'Artificial Inteligence','Angular'=>'Angular','Php'=>'Php','Networking'=>'Networking','Statistics'=>'Statistics','Chemistry'=>'Chemistry','Mathematics'=>'Mathematics','Molecular Biology'=>'Molecular Biology','Botany'=>'Botany','Other'=>'Other'),array('multiple' => true),['class'=>'form-control'])}}
+        </div>
+        <div class="form-group">
             {{Form::label('body','Body')}}
             {{Form::textarea('body',$post->body,['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'body'])}}
         </div>
