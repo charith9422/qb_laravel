@@ -5,8 +5,16 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">My Questions</div>
-
+                <div class="panel-heading">My Questions
+                    <span>
+                        <?php if(auth()->user()->isAdmin == 1){?>
+                            <div>
+                                <a href="{{url('admin/routes')}}">Admin Dashboard</a>
+                            </div>
+                        <?php }?>
+                    </span>
+                        
+                </div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -26,7 +34,7 @@
                         </tr>
                         @foreach ($posts as $post)
                             <tr>
-                                <td>{{$post->title}}</td>
+                                <td style="color:black">{{$post->title}}</td>
                                 <td><a href="/posts/{{$post->id}}/edit" class="btn btn-default"><span><i class="fas fa-edit"></i></span> Edit</a></td>
                                 <td>
                                     {!!Form::open(['action'=>['PostsController@destroy',$post->id],'method'=>'POST','class'=>'pull-right'])!!}

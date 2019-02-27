@@ -18,4 +18,5 @@ Auth::routes();
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('posts.search', 'PostsController@categorySearch');
+Route::get('admin/routes','DashboardController@admin')->middleware('admin');
 

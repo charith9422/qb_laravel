@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Post;
 
 class DashboardController extends Controller
 {
@@ -28,4 +29,12 @@ class DashboardController extends Controller
         $user = User::find($user_id);  
         return view('dashboard')->with('posts',$user->posts);
     }
+
+    public function admin(){
+        $users = User::all();
+        return view('admin',compact('users'));
+        //return view('admin');
+    }
+
+    
 }

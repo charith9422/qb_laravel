@@ -28,7 +28,10 @@ class Post extends Model
     public function category(){
         return $this->belongsTo(Category::class);
     }
-
+    //admin
+    /* public function users(){
+        return $this->hasMany('App\User');
+    } */
     
 
     
