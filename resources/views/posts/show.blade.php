@@ -8,10 +8,11 @@
         <h1>{{$post->title}}</h1>
     </div>
     <div>
-        <h4>{{$post->category}}</h4>
+        <h4><span><strong>Category:</strong></span>{{$post->category}}</h4>
     </div>
+    <img style="width:50%;" class="zoom" src="/storage/cover_images/{{$post->cover_image}} ">
     
-    <img style="width:100%;" src="/storage/cover_images/{{$post->cover_image}} ">
+    
     <br><br>
     <div style="color:white">
         {!!$post->body!!}
@@ -34,5 +35,7 @@
         @endif
             
     @endif
-        
+    
+    
+    <br><br>    
 @endsection
