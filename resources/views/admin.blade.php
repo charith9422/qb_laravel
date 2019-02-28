@@ -27,7 +27,11 @@
                                 <td style="color:black">{{$user->s_number}}</td>
                                 <td style="color:black">{{$user->name}}</td>
                                 <td>
-                                    
+                                    {{-- <form method="POST" action="/user/{{$user->id}}/delete" role="form">
+                                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form> --}}
                                 </td>
                             </tr>
                         @endforeach

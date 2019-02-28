@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -35,6 +36,11 @@ class DashboardController extends Controller
         return view('admin',compact('users'));
         //return view('admin');
     }
+
+    /* public function destroy($id){
+        DB::table('users')->where('id',$id)->delete();
+        return view('admin/routes');
+    } */
 
     
 }
