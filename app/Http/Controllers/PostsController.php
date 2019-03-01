@@ -190,4 +190,6 @@ class PostsController extends Controller
       }
       return view('posts.search', compact('posts'));
     }
+
+   
 }

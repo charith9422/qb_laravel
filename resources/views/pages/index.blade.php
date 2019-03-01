@@ -19,6 +19,7 @@
                --}}
         
                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;border-radius:10px"><i class="fas fa-sign-in-alt"></i> Login</button>
+               <button class="reg" style="background-color:#270be0;width:auto;border-radius:10px"><a href="/register" style="color:#ffffff"><span><i class="fas fa-plus-circle"></i></span> Register</a></button>
                <div id="id01" class="modal">
   
                 <form class="modal-content animate" method="POST" action="{{ route('login') }}">
@@ -60,7 +61,7 @@
               
                   <div class="container" style="background-color:#f1f1f1">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><i class="fas fa-times-circle"></i> Cancel</button>
-                    <span class="psw"><i class="fas fa-plus-circle"></i></i> Need <a href="/register">an account?</a></span>
+                    {{-- <span class="psw"><i class="fas fa-plus-circle"></i></i> Need <a href="/register">an account?</a></span> --}}
                   </div>
                 </form>
               </div>

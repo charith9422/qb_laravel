@@ -39,9 +39,12 @@ class DashboardController extends Controller
     }
 
     public function destroy($id){
+        //DB::table('users')->where('id',$id);
+        $user = User::find($id);
+        $posts = Post::where("user_id", "=", $user->id)->delete();
         DB::table('users')->where('id',$id)->delete();
-        
         $users = User::all();
+
 
         return view('admin',compact('users'))->with('success','User Deleted!');
     }

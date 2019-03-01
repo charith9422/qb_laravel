@@ -25,13 +25,13 @@
                         @foreach ($users as $user)
                             <tr>
                                 <td style="color:black">{{$user->s_number}}</td>
-                                <td style="color:black">{{$user->name}}</td>
+                                <td style="color:black"><a href="">{{$user->name}}</a></td>
                                 <td>
                                     @if($user->isAdmin == false)
                                     <form method="POST" action="/user/{{$user->id}}/delete" role="form">
                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                                         <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="submit" class="btn btn-danger">Delete {{$user->s_number}} & all questions</button>
                                     </form>
                                     @endif
                                 </td>

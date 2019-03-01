@@ -20,6 +20,6 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('posts.search', 'PostsController@categorySearch');
 Route::get('admin/routes','DashboardController@admin')->middleware('admin');
 
-
+Route::get('posts.userposts', 'PostsController@userPosts');
 
 Route::delete('user/{id}/delete',['middleware'=>['admin'],'uses'=>'DashboardController@destroy']);
