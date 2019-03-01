@@ -31,7 +31,7 @@
                                     <form method="POST" action="/user/{{$user->id}}/delete" role="form">
                                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                                         <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" class="btn btn-danger">Delete {{$user->s_number}} & all questions</button>
+                                        <button type="submit" class="btn btn-danger"><span><i class="far fa-trash-alt"></i></span> Delete {{$user->s_number}} with all questions</button>
                                     </form>
                                     @endif
                                 </td>
