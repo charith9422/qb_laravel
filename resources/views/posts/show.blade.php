@@ -10,8 +10,9 @@
     <div>
         <h4><span><strong>Category:</strong></span>{{$post->category}}</h4>
     </div>
-    <img style="width:50%;" class="zoom" src="/storage/cover_images/{{$post->cover_image}} ">
-    
+    @if($post->cover_image != 'noimage.jpg')
+    <img style="width:100%;" class="zoom" src="/storage/cover_images/{{$post->cover_image}} ">
+    @endif
     
     <br><br>
     <div style="color:white">

@@ -22,4 +22,4 @@ Route::get('admin/routes','DashboardController@admin')->middleware('admin');
 
 
 
-/* Route::delete('user/{id}/delete',['middleware'=>['admin'],'uses'=>'DashboardController@destroy']); */
+Route::delete('user/{id}/delete',['middleware'=>['admin'],'uses'=>'DashboardController@destroy']);

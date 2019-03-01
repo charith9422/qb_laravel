@@ -13,8 +13,11 @@
                     </div>
                     <div class="col-md-9 col-sm-9">
                         <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
-                        <h5>{{$post->category}}</h5>
-                        <small style="color:black">Question added on {{$post->created_at}} by {{$post->user->name}}</small>
+                        <div class="chip">
+                            {{$post->category}}
+                        </div>
+                        
+                        <small style="color:black">Question added on {{$post->created_at}}</small>
                     </div>
                 </div>
                 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Post;
 use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
 {
@@ -37,10 +38,13 @@ class DashboardController extends Controller
         //return view('admin');
     }
 
-    /* public function destroy($id){
+    public function destroy($id){
         DB::table('users')->where('id',$id)->delete();
-        return view('admin/routes');
-    } */
+        
+        $users = User::all();
+
+        return view('admin',compact('users'))->with('success','User Deleted!');
+    }
 
     
 }
