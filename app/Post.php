@@ -15,7 +15,8 @@ class Post extends Model
     use SearchableTrait;
     protected $searchable = [
         'columns' => [
-            'posts.category' => 10
+            'posts.category' => 10,
+            'posts.tag' => 10
         ]
     ];
 

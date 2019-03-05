@@ -16,6 +16,9 @@
                         <div class="chip">
                             {{$post->category}}
                         </div>
+                        <div>
+                            <i>{{$post->tag}}</i>
+                        </div>
                         
                         <small style="color:black">Question added on {{$post->created_at}}</small>
                     </div>

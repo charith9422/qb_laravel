@@ -4,8 +4,8 @@
   <div id="wrapper">
     <div class="jumbotron">
 
-        <h1 class="display-4" style="color:white"><strong>Question Bank</strong> | <span><small>Faculty of Science</small></span> </h1>
-        <p class="lead" style="color:white">Question Bank provides you with all the tips that would let you successfully face and interview.
+        <h1 class="display-4" style="color:white"><strong>QBank</strong> | <span><small>FOS</small></span> </h1>
+        <p class="lead" style="color:white">QBank provides you with all the tips that would let you successfully face and interview.
         </p>
         <hr class="my-4">
         <p style="color:white">It consists of all the popular questions that is frequently asked in job interviews mainly related to the

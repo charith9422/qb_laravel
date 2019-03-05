@@ -8,7 +8,7 @@
         <h1>{{$post->title}}</h1>
     </div>
     <div>
-        <h4><span><strong>Category:</strong></span>{{$post->category}}</h4>
+        <h4><span><strong>Category: </strong></span>{{$post->category}} <span><i>{{$post->tag}}</i></span></h4>
     </div>
     @if($post->cover_image != 'noimage.jpg')
     <img style="width:100%;" class="zoom" src="/storage/cover_images/{{$post->cover_image}} ">
