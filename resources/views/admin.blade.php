@@ -20,12 +20,23 @@
                         <tr>
                             <th>Register Number</th>
                             <th>Name</th>
+                            <th>Created Date</th>
                             <th></th>
                         </tr>
                         @foreach ($users as $user)
                             <tr>
                                 <td style="color:black">{{$user->s_number}}</td>
                                 <td style="color:black"><a href="">{{$user->name}}</a></td>
+                                <td style="color:black">{{$user->created_at}}</td>
+                                {{-- <td>
+                                        {!! Form::open(['action'=>['RegisterController@create',$user->id],'method'=>'POST']) !!}
+                                            <div class="form-group">
+                                            
+                                                {{Form::select('admin',array('1'=>'Admin','0'=>'User'),array('multiple' => true),['class'=>'form-control'])}}
+                                            
+                                            </div>
+                                        {!! Form::close() !!}    
+                                </td> --}}
                                 <td>
                                     @if($user->isAdmin == false)
                                     <form method="POST" action="/user/{{$user->id}}/delete" role="form">
@@ -38,6 +49,7 @@
                             </tr>
                         @endforeach
                     </table>
+                    {{ $users->links() }}
                     @else
                         <p>No users available!</p>
                     @endif

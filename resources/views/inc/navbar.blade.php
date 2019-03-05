@@ -15,7 +15,7 @@
                   <!-- Branding Image -->
                   @if (!Auth::guest())
                   <a class="navbar-brand" href="{{ url('/posts') }}">
-                    <span><i class="fas fa-home"></i></span>  {{ config('app.name', 'LSAPP') }} 
+                    <span><i class="fas fa-home"></i></span>  QBank 
                   </a>
                   @endif
               </div>
